@@ -7,15 +7,16 @@
 //
 
 #import "HomeViewController.h"
-
+#import "Home.h"
 @interface HomeViewController ()
-
+@property(nonatomic,strong) IBOutlet Home* m_home;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.m_home refreshHomeView];
     // Do any additional setup after loading the view.
 }
 

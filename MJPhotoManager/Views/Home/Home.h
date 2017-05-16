@@ -16,4 +16,6 @@
     __weak id<HomeDelegate> m_homeDelegate;
 }
 @property (nonatomic, weak) id<HomeDelegate> p_homeDelegate;
+
+-(void)refreshHomeView;
 @end
