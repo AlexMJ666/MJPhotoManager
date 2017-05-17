@@ -10,4 +10,6 @@
 
 @interface HomeCellCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) IBOutlet UILabel* homeCellLab;
+
+-(void)setAttriText:(NSString*)str;
 @end

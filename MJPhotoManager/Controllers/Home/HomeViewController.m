@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "Home.h"
+
 @interface HomeViewController ()
 @property(nonatomic,strong) IBOutlet Home* m_home;
 @end
@@ -25,6 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)addPhotoFromSystem:(id)sender
+{
+}
 /*
 #pragma mark - Navigation
 

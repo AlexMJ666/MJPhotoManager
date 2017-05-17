@@ -17,6 +17,7 @@
 		5390157C1ECAD3AD002D9C4E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390157B1ECAD3AD002D9C4E /* HomeViewController.m */; };
 		5390157F1ECAD3C4002D9C4E /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390157E1ECAD3C4002D9C4E /* Home.m */; };
 		539015831ECAD566002D9C4E /* HomeCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */; };
+		539015871ECBF5B9002D9C4E /* GetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015861ECBF5B9002D9C4E /* GetPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		5390157E1ECAD3C4002D9C4E /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		539015811ECAD566002D9C4E /* HomeCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellCollectionViewCell.h; sourceTree = "<group>"; };
 		539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellCollectionViewCell.m; sourceTree = "<group>"; };
+		539015851ECBF5B9002D9C4E /* GetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhoto.h; sourceTree = "<group>"; };
+		539015861ECBF5B9002D9C4E /* GetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,7 @@
 		539015781ECAD324002D9C4E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				539015841ECBF5AD002D9C4E /* GetPhoto */,
 				5390157A1ECAD3AD002D9C4E /* HomeViewController.h */,
 				5390157B1ECAD3AD002D9C4E /* HomeViewController.m */,
 			);
@@ -196,6 +200,15 @@
 				539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */,
 			);
 			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		539015841ECBF5AD002D9C4E /* GetPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				539015851ECBF5B9002D9C4E /* GetPhoto.h */,
+				539015861ECBF5B9002D9C4E /* GetPhoto.m */,
+			);
+			path = GetPhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +352,7 @@
 				5390157F1ECAD3C4002D9C4E /* Home.m in Sources */,
 				539015831ECAD566002D9C4E /* HomeCellCollectionViewCell.m in Sources */,
 				5390157C1ECAD3AD002D9C4E /* HomeViewController.m in Sources */,
+				539015871ECBF5B9002D9C4E /* GetPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +590,7 @@
 				5390156E1ECAD10E002D9C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5390156F1ECAD10E002D9C4E /* Build configuration list for PBXNativeTarget "MJPhotoManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +599,7 @@
 				539015711ECAD10E002D9C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		539015721ECAD10E002D9C4E /* Build configuration list for PBXNativeTarget "MJPhotoManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +608,7 @@
 				539015741ECAD10E002D9C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -48,7 +48,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     HomeCellCollectionViewCell *cell = (HomeCellCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"HomeCellId" forIndexPath:indexPath];
-    cell.homeCellLab.text = [NSString stringWithFormat:@"20170517"];
+    [cell setAttriText:@"1705\n2017"];
     
     cell.backgroundColor = [UIColor colorWithRed:240.0f/255.0f green:240.0f/255.0f blue:240.0f/255.0f alpha:1];
     
@@ -64,7 +64,7 @@
 //设置每个item的UIEdgeInsets
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsMake(5, 5, 5, 5);
+    return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
 //设置每个item水平间距

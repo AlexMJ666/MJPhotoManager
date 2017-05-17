@@ -13,20 +13,38 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.homeCellLab = [[UILabel alloc]initWithFrame:self.frame];
-        self.homeCellLab.backgroundColor = [UIColor colorWithRed:220.0f/255.0f green:220.0f/255.0f blue:220.0f/255.0f alpha:1];
-        self.homeCellLab.textAlignment = NSTextAlignmentCenter;
         
-        NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:@"20170516"];
-        [AttributedStr addAttribute:NSFontAttributeName
-                              value:[UIFont systemFontOfSize:16.0]
-                              range:NSMakeRange(0, 4)];
-        [AttributedStr addAttribute:NSForegroundColorAttributeName
-                              value:[UIColor redColor]
-                              range:NSMakeRange(0, 4)];
-        self.homeCellLab.attributedText = AttributedStr;
-        [self.contentView addSubview:self.homeCellLab];
     }
     return self;
 }
+
+-(void)setAttriText:(NSString *)str
+{
+    NSMutableAttributedString *AttributedStr = [[NSMutableAttributedString alloc]initWithString:str];
+    [AttributedStr addAttribute:NSFontAttributeName
+                          value:[UIFont systemFontOfSize:60.0]
+                          range:NSMakeRange(4, 5)];
+    [AttributedStr addAttribute:NSForegroundColorAttributeName
+                          value:[UIColor redColor]
+                          range:NSMakeRange(4, 5)];
+    
+    [AttributedStr addAttribute:NSFontAttributeName
+                          value:[UIFont systemFontOfSize:15.0]
+                          range:NSMakeRange(2, 2)];
+    
+    [AttributedStr addAttribute:NSForegroundColorAttributeName
+                          value:[UIColor blueColor]
+                          range:NSMakeRange(2, 2)];
+    
+    [AttributedStr addAttribute:NSFontAttributeName
+                          value:[UIFont systemFontOfSize:45.0]
+                          range:NSMakeRange(0, 2)];
+    
+    [AttributedStr addAttribute:NSForegroundColorAttributeName
+                          value:[UIColor blackColor]
+                          range:NSMakeRange(0, 2)];
+    
+    self.homeCellLab.attributedText = AttributedStr;
+}
+
 @end
