@@ -7,63 +7,80 @@
 //
 
 #import "ViewController.h"
-
+#import <GPUImage.h>
 @interface ViewController ()
-@property(nonatomic,strong) EAGLContext* m_context;
-@property(nonatomic,strong) GLKBaseEffect* m_baseEffect;
+@property (nonatomic , strong) EAGLContext* mContext;
+@property (nonatomic , strong) GLKBaseEffect* mEffect;
+@property (nonatomic , assign) GLuint       myProgram;
+@property (nonatomic , strong) IBOutlet UIImageView* imgView;
+@property (nonatomic , strong) IBOutlet UISlider* sliderView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.m_context = [[EAGLContext alloc]initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    GLKView* view = (GLKView*)self.view;
-    view.context = self.m_context;
-    view.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
-    [EAGLContext setCurrentContext:self.m_context];
     
-    GLfloat squareVertextData[] =
+    UIImage* img = [UIImage imageNamed:@"IMG_2132.JPG"];
+    GPUImageContrastFilter *filter = [[GPUImageContrastFilter alloc] init];
+    filter.contrast = self.sliderView.value;
+    [filter forceProcessingAtSize:img.size];
+    GPUImagePicture *pic = [[GPUImagePicture alloc] initWithImage:img];
+    [pic addTarget:filter];
+    
+    [pic processImage];
+    [filter useNextFrameForImageCapture];
+    self.imgView.image = [filter imageFromCurrentFramebuffer];
+//    [self setupConfig];
+  //  [self uploadVertexArray];
+    //[self uploadTexture];
+}
+
+- (void)setupConfig {
+    //新建OpenGLES 上下文
+    self.mContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2]; //2.0，还有1.0和3.0
+    GLKView* view = (GLKView *)self.view; //storyboard记得添加
+    view.context = self.mContext;
+    view.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;  //颜色缓冲区格式
+    [EAGLContext setCurrentContext:self.mContext];
+}
+
+- (void)uploadVertexArray {
+    //顶点数据，前三个是顶点坐标，后面两个是纹理坐标
+    GLfloat squareVertexData[] =
     {
-        0.5,-0.5,0.0f,      1.0f,0.0f,  //右下
-        0.5,0.5,-0.0f,      1.0f,1.0f,  //右上
-       -0.5f,0.5f,0.0f,     0.0f,1.0f,  //左上
+        0.5, -0.5, 0.0f,    1.0f, 0.0f, //右下
+        0.5, 0.5, -0.0f,    1.0f, 1.0f, //右上
+        -0.5, 0.5, 0.0f,    0.0f, 1.0f, //左上
         
-        0.5,-0.5,0.0f,      1.0f,0.0f,  //右下
-       -0.5f,0.5f,0.0f,     0.0f,1.0f,  //左上
-       -0.5f,-0.5f,0.0f,    0.0f,0.0f   //左下
-        
-        
+        0.5, -0.5, 0.0f,    1.0f, 0.0f, //右下
+        -0.5, 0.5, 0.0f,    0.0f, 1.0f, //左上
+        -0.5, -0.5, 0.0f,   0.0f, 0.0f, //左下
     };
     
+    //顶点数据缓存
     GLuint buffer;
-    glGenBuffers(1, &buffer);   //glGenBuffers申请一个标识符
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);  //glBindBuffer把标识符绑定到GL_ARRAY_BUFFER上
+    glGenBuffers(1, &buffer);
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(squareVertexData), squareVertexData, GL_STATIC_DRAW);
     
-    //glBufferData把顶点数据从cpu内存复制到gpu内存
-    glBufferData(GL_ARRAY_BUFFER, sizeof(squareVertextData), squareVertextData, GL_STATIC_DRAW);
-    
-    //glEnableVertexAttribArray 是开启对应的顶点属性
-    glEnableVertexAttribArray(GLKVertexAttribPosition);
-    
-    //glVertexAttribPointer设置合适的格式从buffer里面读取数据
-    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, (GLfloat*)NULL+0);
-    
-    
-    glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
-    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat)*5, (GLfloat*)NULL+3);
-    
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"IMG_2132" ofType:@"JPG"];
-    NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:@(1),GLKTextureLoaderOriginBottomLeft, nil];
-    
-    GLKTextureInfo* textureInfo = [GLKTextureLoader textureWithContentsOfFile:filePath options:options error:nil];
-    
-    self.m_baseEffect = [[GLKBaseEffect alloc]init];
-    self.m_baseEffect.texture2d0.enabled = GL_TRUE;
-    self.m_baseEffect.texture2d0.name = textureInfo.name;
-    
-    // Do any additional setup after loading the view, typically from a nib.
+    glEnableVertexAttribArray(GLKVertexAttribPosition); //顶点数据缓存
+    glVertexAttribPointer(GLKVertexAttribPosition, 3, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 0);
+    glEnableVertexAttribArray(GLKVertexAttribTexCoord0); //纹理
+    glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 3);
 }
+
+- (void)uploadTexture {
+    //纹理贴图
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"IMG_2132" ofType:@"JPG"];
+    NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:@(1), GLKTextureLoaderOriginBottomLeft, nil];//GLKTextureLoaderOriginBottomLeft 纹理坐标系是相反的
+    GLKTextureInfo* textureInfo = [GLKTextureLoader textureWithContentsOfFile:filePath options:options error:nil];
+    //着色器
+    self.mEffect = [[GLKBaseEffect alloc] init];
+    self.mEffect.texture2d0.enabled = GL_TRUE;
+    self.mEffect.texture2d0.name = textureInfo.name;
+}
+
 /**
  *  渲染场景代码
  */
@@ -72,10 +89,27 @@
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     //启动着色器
-    [self.m_baseEffect prepareToDraw];
+    [self.mEffect prepareToDraw];
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
+    
+//    GLuint rotate = glGetUniformLocation(self.myProgram, "rotateMatrix");
+//    float radians = 10*3.14159f/180.0f;
+//    float s = sin(radians);
+//    float c = cos(radians);
+//    
+//    //z轴旋转矩阵
+//    GLfloat zRotation[16] = { //
+//        c,      -s,     0,      0.2, //
+//        s,      c,      0,      0,//
+//        0,      0,      1.0,    0,//
+//        0.0,    0,      0,      1.0//
+//    };
+//    glUniformMatrix4fv(rotate, 1, GL_FALSE, (GLfloat *)&zRotation[0]);
+//    
+//    glDrawArrays(GL_TRIANGLES, 0, 6);
+//    [self.m_context presentRenderbuffer:GL_RENDERBUFFER];
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

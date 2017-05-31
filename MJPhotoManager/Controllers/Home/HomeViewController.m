@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "Home.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,strong) IBOutlet Home* m_home;
 @end
 
@@ -28,7 +28,23 @@
 
 -(IBAction)addPhotoFromSystem:(id)sender
 {
+    UIImagePickerController *pickerImage = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        pickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        pickerImage.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:pickerImage.sourceType];
+    }
+    pickerImage.delegate = self;
+    pickerImage.allowsEditing = NO;
+    [self presentViewController:pickerImage animated:YES completion:^{
+        
+    }];
 }
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{}
 /*
 #pragma mark - Navigation
 

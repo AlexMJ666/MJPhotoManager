@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E62511C17B955508D7F50BD /* libPods-MJPhotoManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9555AE437FE90C255CB5DEA6 /* libPods-MJPhotoManager.a */; };
 		539015441ECAD10D002D9C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015431ECAD10D002D9C4E /* main.m */; };
 		539015471ECAD10D002D9C4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015461ECAD10D002D9C4E /* AppDelegate.m */; };
 		5390154D1ECAD10E002D9C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5390154B1ECAD10E002D9C4E /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager.release.xcconfig"; sourceTree = "<group>"; };
 		5390153F1ECAD10D002D9C4E /* MJPhotoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539015431ECAD10D002D9C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		539015451ECAD10D002D9C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +62,8 @@
 		539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellCollectionViewCell.m; sourceTree = "<group>"; };
 		539015851ECBF5B9002D9C4E /* GetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhoto.h; sourceTree = "<group>"; };
 		539015861ECBF5B9002D9C4E /* GetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhoto.m; sourceTree = "<group>"; };
+		9555AE437FE90C255CB5DEA6 /* libPods-MJPhotoManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJPhotoManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB6B46204A2393D5A798D0BF /* Pods-MJPhotoManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E62511C17B955508D7F50BD /* libPods-MJPhotoManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,8 @@
 				5390155B1ECAD10E002D9C4E /* MJPhotoManagerTests */,
 				539015661ECAD10E002D9C4E /* MJPhotoManagerUITests */,
 				539015401ECAD10D002D9C4E /* Products */,
+				BD031C7B488ADFE8D4328409 /* Pods */,
+				F72D0F864D66E22812EB8EAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +218,23 @@
 			path = GetPhoto;
 			sourceTree = "<group>";
 		};
+		BD031C7B488ADFE8D4328409 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB6B46204A2393D5A798D0BF /* Pods-MJPhotoManager.debug.xcconfig */,
+				212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F72D0F864D66E22812EB8EAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9555AE437FE90C255CB5DEA6 /* libPods-MJPhotoManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5390156C1ECAD10E002D9C4E /* Build configuration list for PBXNativeTarget "MJPhotoManager" */;
 			buildPhases = (
+				5E3C97A354C2F7B52BFD461A /* [CP] Check Pods Manifest.lock */,
 				5390153B1ECAD10D002D9C4E /* Sources */,
 				5390153C1ECAD10D002D9C4E /* Frameworks */,
 				5390153D1ECAD10D002D9C4E /* Resources */,
+				7DBA14AF827663E138CA5D3C /* [CP] Embed Pods Frameworks */,
+				255D5655A6EA950A4EC5DC1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,6 +368,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		255D5655A6EA950A4EC5DC1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E3C97A354C2F7B52BFD461A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DBA14AF827663E138CA5D3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5390153B1ECAD10D002D9C4E /* Sources */ = {
@@ -499,6 +574,7 @@
 		};
 		5390156D1ECAD10E002D9C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB6B46204A2393D5A798D0BF /* Pods-MJPhotoManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S68G4DDNSL;
@@ -511,6 +587,7 @@
 		};
 		5390156E1ECAD10E002D9C4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S68G4DDNSL;

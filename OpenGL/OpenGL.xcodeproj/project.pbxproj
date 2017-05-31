@@ -16,6 +16,7 @@
 		539015AF1ECC2838002D9C4E /* OpenGLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015AE1ECC2838002D9C4E /* OpenGLTests.m */; };
 		539015BA1ECC2839002D9C4E /* OpenGLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015B91ECC2838002D9C4E /* OpenGLUITests.m */; };
 		539015C81ECC2C3B002D9C4E /* IMG_2132.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 539015C71ECC2C3B002D9C4E /* IMG_2132.JPG */; };
+		FF43795215A82E0DAD33C3E3 /* libPods-OpenGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F61A4B14B638A3D095512C62 /* libPods-OpenGL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C105DE95011B7A271FC24D0 /* Pods-OpenGL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenGL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenGL/Pods-OpenGL.debug.xcconfig"; sourceTree = "<group>"; };
 		539015911ECC2838002D9C4E /* OpenGL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539015951ECC2838002D9C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		539015971ECC2838002D9C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		539015B91ECC2838002D9C4E /* OpenGLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLUITests.m; sourceTree = "<group>"; };
 		539015BB1ECC2839002D9C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539015C71ECC2C3B002D9C4E /* IMG_2132.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2132.JPG; sourceTree = "<group>"; };
+		F61A4B14B638A3D095512C62 /* libPods-OpenGL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OpenGL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B291CA789C1B860790479C /* Pods-OpenGL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenGL.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenGL/Pods-OpenGL.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF43795215A82E0DAD33C3E3 /* libPods-OpenGL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E608CC5E672097DA6E5DEE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F61A4B14B638A3D095512C62 /* libPods-OpenGL.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		539015881ECC2838002D9C4E = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,8 @@
 				539015AD1ECC2838002D9C4E /* OpenGLTests */,
 				539015B81ECC2838002D9C4E /* OpenGLUITests */,
 				539015921ECC2838002D9C4E /* Products */,
+				8F3CA7A24DC961E346E67048 /* Pods */,
+				1E608CC5E672097DA6E5DEE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,15 @@
 			path = OpenGLUITests;
 			sourceTree = "<group>";
 		};
+		8F3CA7A24DC961E346E67048 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C105DE95011B7A271FC24D0 /* Pods-OpenGL.debug.xcconfig */,
+				F6B291CA789C1B860790479C /* Pods-OpenGL.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +174,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 539015BE1ECC2839002D9C4E /* Build configuration list for PBXNativeTarget "OpenGL" */;
 			buildPhases = (
+				F74DA7F1C0658D4B318A6EC6 /* [CP] Check Pods Manifest.lock */,
 				5390158D1ECC2838002D9C4E /* Sources */,
 				5390158E1ECC2838002D9C4E /* Frameworks */,
 				5390158F1ECC2838002D9C4E /* Resources */,
+				70BDED610301E4D7982259AD /* [CP] Embed Pods Frameworks */,
+				68AE911EC396C010323F363C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -274,6 +301,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68AE911EC396C010323F363C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenGL/Pods-OpenGL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70BDED610301E4D7982259AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenGL/Pods-OpenGL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F74DA7F1C0658D4B318A6EC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5390158D1ECC2838002D9C4E /* Sources */ = {
@@ -429,6 +504,7 @@
 		};
 		539015BF1ECC2839002D9C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C105DE95011B7A271FC24D0 /* Pods-OpenGL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S68G4DDNSL;
@@ -441,6 +517,7 @@
 		};
 		539015C01ECC2839002D9C4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B291CA789C1B860790479C /* Pods-OpenGL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S68G4DDNSL;
