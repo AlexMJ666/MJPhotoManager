@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <Photos/Photos.h>
 @interface GetPhoto : NSObject
++(instancetype)shareInstance;
 
 @end
