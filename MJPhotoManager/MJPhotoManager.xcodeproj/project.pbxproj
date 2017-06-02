@@ -40,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager.release.xcconfig"; sourceTree = "<group>"; };
+		536953771EE122FC0072400C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		5390153F1ECAD10D002D9C4E /* MJPhotoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539015431ECAD10D002D9C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		539015451ECAD10D002D9C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 				539015841ECBF5AD002D9C4E /* GetPhoto */,
 				5390157A1ECAD3AD002D9C4E /* HomeViewController.h */,
 				5390157B1ECAD3AD002D9C4E /* HomeViewController.m */,
+				536953771EE122FC0072400C /* Header.h */,
 			);
 			path = Home;
 			sourceTree = "<group>";

@@ -11,4 +11,5 @@
 @interface GetPhoto : NSObject
 +(instancetype)shareInstance;
 
+
 @end
