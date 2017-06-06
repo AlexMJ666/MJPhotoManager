@@ -307,7 +307,6 @@
 				TargetAttributes = {
 					5390153E1ECAD10D002D9C4E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = S68G4DDNSL;
 						ProvisioningStyle = Automatic;
 					};
 					539015571ECAD10E002D9C4E = {
@@ -579,7 +578,7 @@
 			baseConfigurationReference = EB6B46204A2393D5A798D0BF /* Pods-MJPhotoManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S68G4DDNSL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MJPhotoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MJJ.MJPhotoManager;
@@ -592,7 +591,7 @@
 			baseConfigurationReference = 212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S68G4DDNSL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MJPhotoManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MJJ.MJPhotoManager;

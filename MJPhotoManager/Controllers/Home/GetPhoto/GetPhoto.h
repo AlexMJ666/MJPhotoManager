@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Photos/Photos.h>
+#import "Header.h"
 @interface GetPhoto : NSObject
 +(instancetype)shareInstance;
 
-
+-(void)readAllPhotoGroups:(AssetGroupBlock)
 @end

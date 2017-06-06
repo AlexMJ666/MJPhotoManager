@@ -8,7 +8,7 @@
 
 #import "HomeViewController.h"
 #import "Home.h"
-
+#import <Photos/Photos.h>
 @interface HomeViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic,strong) IBOutlet Home* m_home;
 @end
@@ -28,16 +28,34 @@
 
 -(IBAction)addPhotoFromSystem:(id)sender
 {
-    UIImagePickerController *pickerImage = [[UIImagePickerController alloc] init];
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        pickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        pickerImage.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:pickerImage.sourceType];
+//    UIImagePickerController *pickerImage = [[UIImagePickerController alloc] init];
+//    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+//        pickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+//        pickerImage.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:pickerImage.sourceType];
+//    }
+//    pickerImage.delegate = self;
+//    pickerImage.allowsEditing = NO;
+//    [self presentViewController:pickerImage animated:YES completion:^{
+//        
+//    }];
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    
+    if (status == PHAuthorizationStatusRestricted||status == PHAuthorizationStatusDenied) {
+        NSLog(@"无访问权限");
+    }else
+    {
+        NSLog(@"可以访问相册");
     }
-    pickerImage.delegate = self;
-    pickerImage.allowsEditing = NO;
-    [self presentViewController:pickerImage animated:YES completion:^{
-        
-    }];
+    
+    NSMutableArray* alubms = [NSMutableArray new];
+    PHFetchOptions *fetchOptions =[[PHFetchOptions alloc]init];
+    PHFetchResult *smartAlbumsFetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary options:fetchOptions];
+    [alubms addObject:[smartAlbumsFetchResult objectAtIndex:0]];
+    PHFetchResult *smartAlbumsFetchResult1 = [PHAssetCollection fetchTopLevelUserCollectionsWithOptions:fetchOptions];//注意类型
+    for(PHAssetCollection *sub in smartAlbumsFetchResult1){    //遍历到数组中
+        [alubms addObject:sub];
+    }
+
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
