@@ -12,7 +12,7 @@
 typedef enum : NSUInteger {
     kPutItInView,
     kPutItInWindow,
-} MPhotoBrowerPosition;
+} MJPhotoBrowerPosition;
 @interface MJPhoto : UIView
 {
     UIImageView* readyForZoomImg;
@@ -26,7 +26,7 @@ typedef enum : NSUInteger {
  @param superV 父视图
  @param position 位置
  */
--(void)initImg:(UIImageView*) smallImgV andSuperView:(UIView*)superV andPosition:(MPhotoBrowerPosition)position;
+-(void)initImg:(UIImageView*) smallImgV andSuperView:(UIView*)superV andPosition:(MJPhotoBrowerPosition)position;
 
 
 /**
@@ -37,5 +37,5 @@ typedef enum : NSUInteger {
  @param superV 父视图
  @param position 位置
  */
--(void)initImag:(NSMutableArray*)smallImgArrays andFirstImageView:(UIImageView*)smallImgV andSuperView:(UIView*)superV andPosition:(MPhotoBrowerPosition)position;
+-(void)initImag:(NSMutableArray*)smallImgArrays andFirstImageView:(UIImageView*)smallImgV andSuperView:(UIView*)superV andPosition:(MJPhotoBrowerPosition)position;
 @end

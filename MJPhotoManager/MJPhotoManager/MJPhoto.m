@@ -57,7 +57,7 @@
     return self;
 }
 
--(void)initImag:(NSMutableArray*)smallImgArrays andFirstImageView:(UIImageView*)smallImgV andSuperView:(UIView*)superV andPosition:(MPhotoBrowerPosition)position
+-(void)initImag:(NSMutableArray*)smallImgArrays andFirstImageView:(UIImageView*)smallImgV andSuperView:(UIView*)superV andPosition:(MJPhotoBrowerPosition)position
 {
     UIWindow* window = [UIApplication sharedApplication].keyWindow;
     self.p_scrollView.contentSize = CGSizeMake( kMainScreen_Width*smallImgArrays.count, kMainScreen_Height);
@@ -102,7 +102,7 @@
     }
 }
 
--(void)initImg:(UIImageView*) smallImgV andSuperView:(UIView*)superV andPosition:(MPhotoBrowerPosition)position
+-(void)initImg:(UIImageView*) smallImgV andSuperView:(UIView*)superV andPosition:(MJPhotoBrowerPosition)position
 {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     

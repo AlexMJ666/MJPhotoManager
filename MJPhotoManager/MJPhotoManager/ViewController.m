@@ -28,25 +28,21 @@
     m_mapImg.userInteractionEnabled = YES;
     [m_mapImg sd_setImageWithURL:[NSURL URLWithString:@"http://www.afwing.com/d/file/aircraft/usa/old-fighter/d39b51cdef465a5e0b1df18886c1cb1b.jpg"] placeholderImage:nil];
     [m_mapImg addGestureRecognizer:recognizer];
-//    [m_mapImg add]
     [self.view addSubview:m_mapImg];
-   // [self pressImg:@"http://www.afwing.com/d/file/aircraft/usa/old-fighter/d39b51cdef465a5e0b1df18886c1cb1b.jpg" andImageView:m_mapImg];
     // Do any additional setup after loading the view.
 }
 
 -(void)press
 {
-    
     NSMutableArray* mutable = [[NSMutableArray alloc]init];
-    
     [mutable addObject:[NSURL URLWithString:@"http://www.afwing.com/d/file/aircraft/usa/old-fighter/d39b51cdef465a5e0b1df18886c1cb1b.jpg"]];
     [mutable addObject:[NSURL URLWithString:@"http://cdn.scratch.mit.edu/static/site/projects/thumbnails/1784/6634.png"]];
-    
     MJPhoto* photo = [[MJPhoto alloc]initWithFrame:self.view.bounds];
     //[photo initImg:m_mapImg andSuperView:self.view andPosition:kPutItInWindow];
     [photo initImag:mutable andFirstImageView:m_mapImg andSuperView:self.view andPosition:kPutItInWindow];
     [self.view addSubview:photo];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
