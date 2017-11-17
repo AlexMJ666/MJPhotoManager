@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04E20E941FBEBB6A00C9A331 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E20E931FBEBB6A00C9A331 /* ViewController.m */; };
+		04E20E971FBEBBB900C9A331 /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E20E961FBEBBB900C9A331 /* MJPhoto.m */; };
+		04E20E991FBEC32300C9A331 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E20E981FBEC32300C9A331 /* 5.png */; };
 		1E62511C17B955508D7F50BD /* libPods-MJPhotoManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9555AE437FE90C255CB5DEA6 /* libPods-MJPhotoManager.a */; };
 		539015441ECAD10D002D9C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015431ECAD10D002D9C4E /* main.m */; };
 		539015471ECAD10D002D9C4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015461ECAD10D002D9C4E /* AppDelegate.m */; };
@@ -15,10 +18,6 @@
 		539015521ECAD10E002D9C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539015501ECAD10E002D9C4E /* LaunchScreen.storyboard */; };
 		5390155D1ECAD10E002D9C4E /* MJPhotoManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390155C1ECAD10E002D9C4E /* MJPhotoManagerTests.m */; };
 		539015681ECAD10E002D9C4E /* MJPhotoManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015671ECAD10E002D9C4E /* MJPhotoManagerUITests.m */; };
-		5390157C1ECAD3AD002D9C4E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390157B1ECAD3AD002D9C4E /* HomeViewController.m */; };
-		5390157F1ECAD3C4002D9C4E /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 5390157E1ECAD3C4002D9C4E /* Home.m */; };
-		539015831ECAD566002D9C4E /* HomeCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */; };
-		539015871ECBF5B9002D9C4E /* GetPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015861ECBF5B9002D9C4E /* GetPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E20E921FBEBB6A00C9A331 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04E20E931FBEBB6A00C9A331 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04E20E951FBEBBB900C9A331 /* MJPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
+		04E20E961FBEBBB900C9A331 /* MJPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPhoto.m; sourceTree = "<group>"; };
+		04E20E981FBEC32300C9A331 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager.release.xcconfig"; sourceTree = "<group>"; };
-		536953771EE122FC0072400C /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		5390153F1ECAD10D002D9C4E /* MJPhotoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539015431ECAD10D002D9C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		539015451ECAD10D002D9C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,14 +58,6 @@
 		539015631ECAD10E002D9C4E /* MJPhotoManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MJPhotoManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539015671ECAD10E002D9C4E /* MJPhotoManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPhotoManagerUITests.m; sourceTree = "<group>"; };
 		539015691ECAD10E002D9C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5390157A1ECAD3AD002D9C4E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		5390157B1ECAD3AD002D9C4E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		5390157D1ECAD3C4002D9C4E /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
-		5390157E1ECAD3C4002D9C4E /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
-		539015811ECAD566002D9C4E /* HomeCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellCollectionViewCell.h; sourceTree = "<group>"; };
-		539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellCollectionViewCell.m; sourceTree = "<group>"; };
-		539015851ECBF5B9002D9C4E /* GetPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPhoto.h; sourceTree = "<group>"; };
-		539015861ECBF5B9002D9C4E /* GetPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPhoto.m; sourceTree = "<group>"; };
 		9555AE437FE90C255CB5DEA6 /* libPods-MJPhotoManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MJPhotoManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6B46204A2393D5A798D0BF /* Pods-MJPhotoManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,9 +91,6 @@
 		539015361ECAD10D002D9C4E = {
 			isa = PBXGroup;
 			children = (
-				539015771ECAD30C002D9C4E /* Models */,
-				539015761ECAD304002D9C4E /* Views */,
-				539015751ECAD2FD002D9C4E /* Controllers */,
 				539015411ECAD10D002D9C4E /* MJPhotoManager */,
 				5390155B1ECAD10E002D9C4E /* MJPhotoManagerTests */,
 				539015661ECAD10E002D9C4E /* MJPhotoManagerUITests */,
@@ -121,13 +113,18 @@
 		539015411ECAD10D002D9C4E /* MJPhotoManager */ = {
 			isa = PBXGroup;
 			children = (
+				04E20E981FBEC32300C9A331 /* 5.png */,
 				539015451ECAD10D002D9C4E /* AppDelegate.h */,
 				539015461ECAD10D002D9C4E /* AppDelegate.m */,
+				04E20E921FBEBB6A00C9A331 /* ViewController.h */,
+				04E20E931FBEBB6A00C9A331 /* ViewController.m */,
 				5390154B1ECAD10E002D9C4E /* Main.storyboard */,
 				5390154E1ECAD10E002D9C4E /* Assets.xcassets */,
 				539015501ECAD10E002D9C4E /* LaunchScreen.storyboard */,
 				539015531ECAD10E002D9C4E /* Info.plist */,
 				539015421ECAD10D002D9C4E /* Supporting Files */,
+				04E20E951FBEBBB900C9A331 /* MJPhoto.h */,
+				04E20E961FBEBBB900C9A331 /* MJPhoto.m */,
 			);
 			path = MJPhotoManager;
 			sourceTree = "<group>";
@@ -156,68 +153,6 @@
 				539015691ECAD10E002D9C4E /* Info.plist */,
 			);
 			path = MJPhotoManagerUITests;
-			sourceTree = "<group>";
-		};
-		539015751ECAD2FD002D9C4E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				539015781ECAD324002D9C4E /* Home */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		539015761ECAD304002D9C4E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				539015791ECAD32B002D9C4E /* Home */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		539015771ECAD30C002D9C4E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		539015781ECAD324002D9C4E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				539015841ECBF5AD002D9C4E /* GetPhoto */,
-				5390157A1ECAD3AD002D9C4E /* HomeViewController.h */,
-				5390157B1ECAD3AD002D9C4E /* HomeViewController.m */,
-				536953771EE122FC0072400C /* Header.h */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		539015791ECAD32B002D9C4E /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				539015801ECAD554002D9C4E /* HomeCell */,
-				5390157D1ECAD3C4002D9C4E /* Home.h */,
-				5390157E1ECAD3C4002D9C4E /* Home.m */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		539015801ECAD554002D9C4E /* HomeCell */ = {
-			isa = PBXGroup;
-			children = (
-				539015811ECAD566002D9C4E /* HomeCellCollectionViewCell.h */,
-				539015821ECAD566002D9C4E /* HomeCellCollectionViewCell.m */,
-			);
-			path = HomeCell;
-			sourceTree = "<group>";
-		};
-		539015841ECBF5AD002D9C4E /* GetPhoto */ = {
-			isa = PBXGroup;
-			children = (
-				539015851ECBF5B9002D9C4E /* GetPhoto.h */,
-				539015861ECBF5B9002D9C4E /* GetPhoto.m */,
-			);
-			path = GetPhoto;
 			sourceTree = "<group>";
 		};
 		BD031C7B488ADFE8D4328409 /* Pods */ = {
@@ -349,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				539015521ECAD10E002D9C4E /* LaunchScreen.storyboard in Resources */,
+				04E20E991FBEC32300C9A331 /* 5.png in Resources */,
 				5390154F1ECAD10E002D9C4E /* Assets.xcassets in Resources */,
 				5390154D1ECAD10E002D9C4E /* Main.storyboard in Resources */,
 			);
@@ -377,9 +313,17 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -392,13 +336,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MJPhotoManager-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7DBA14AF827663E138CA5D3C /* [CP] Embed Pods Frameworks */ = {
@@ -423,12 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E20E941FBEBB6A00C9A331 /* ViewController.m in Sources */,
+				04E20E971FBEBBB900C9A331 /* MJPhoto.m in Sources */,
 				539015471ECAD10D002D9C4E /* AppDelegate.m in Sources */,
 				539015441ECAD10D002D9C4E /* main.m in Sources */,
-				5390157F1ECAD3C4002D9C4E /* Home.m in Sources */,
-				539015831ECAD566002D9C4E /* HomeCellCollectionViewCell.m in Sources */,
-				5390157C1ECAD3AD002D9C4E /* HomeViewController.m in Sources */,
-				539015871ECBF5B9002D9C4E /* GetPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
