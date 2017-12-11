@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 typedef enum : NSUInteger {
     kPutItInView,
     kPutItInWindow,

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		04E20E941FBEBB6A00C9A331 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E20E931FBEBB6A00C9A331 /* ViewController.m */; };
 		04E20E971FBEBBB900C9A331 /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E20E961FBEBBB900C9A331 /* MJPhoto.m */; };
-		04E20E991FBEC32300C9A331 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E20E981FBEC32300C9A331 /* 5.png */; };
 		1E62511C17B955508D7F50BD /* libPods-MJPhotoManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9555AE437FE90C255CB5DEA6 /* libPods-MJPhotoManager.a */; };
 		539015441ECAD10D002D9C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015431ECAD10D002D9C4E /* main.m */; };
 		539015471ECAD10D002D9C4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 539015461ECAD10D002D9C4E /* AppDelegate.m */; };
@@ -42,7 +41,6 @@
 		04E20E931FBEBB6A00C9A331 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		04E20E951FBEBBB900C9A331 /* MJPhoto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
 		04E20E961FBEBBB900C9A331 /* MJPhoto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJPhoto.m; sourceTree = "<group>"; };
-		04E20E981FBEC32300C9A331 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		212209F3377E89E98F54B0D1 /* Pods-MJPhotoManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MJPhotoManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-MJPhotoManager/Pods-MJPhotoManager.release.xcconfig"; sourceTree = "<group>"; };
 		5390153F1ECAD10D002D9C4E /* MJPhotoManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJPhotoManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539015431ECAD10D002D9C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		539015411ECAD10D002D9C4E /* MJPhotoManager */ = {
 			isa = PBXGroup;
 			children = (
-				04E20E981FBEC32300C9A331 /* 5.png */,
 				539015451ECAD10D002D9C4E /* AppDelegate.h */,
 				539015461ECAD10D002D9C4E /* AppDelegate.m */,
 				04E20E921FBEBB6A00C9A331 /* ViewController.h */,
@@ -284,7 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				539015521ECAD10E002D9C4E /* LaunchScreen.storyboard in Resources */,
-				04E20E991FBEC32300C9A331 /* 5.png in Resources */,
 				5390154F1ECAD10E002D9C4E /* Assets.xcassets in Resources */,
 				5390154D1ECAD10E002D9C4E /* Main.storyboard in Resources */,
 			);

@@ -80,6 +80,7 @@
         readyForZoomImg.userInteractionEnabled = YES;
         UITapGestureRecognizer* singleRecognizer;
         singleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(carImgTap:)];
+        
         //点击的次数
         singleRecognizer.numberOfTapsRequired = 1; // 单击
         [readyForZoomImg addGestureRecognizer:singleRecognizer];
@@ -97,7 +98,6 @@
         //点击的次数
         singleRecognizer.numberOfTapsRequired = 1; // 单击
         [tempImg addGestureRecognizer:singleRecognizer];
-        
         [self.p_scrollView addSubview:tempImg];
     }
 }
